@@ -62,42 +62,63 @@ header .container{
 
 /* /HEADER */
 /* MAIN */
-section.features{
+/* section features */
+section#features{
     padding-top: 100px;
 }
-/* main :nth-child(even){
+main :nth-child(even){
     background-color:var(--secondary-col);
-} */
-.features .col{
+}
+#features .col{
     background-color: var(--primary-col-light);
     border-radius: 20px;
     width: 100%;
     margin-bottom: 1em;
 }
-.features .image,
-.features .text{
+#features .image,
+#features .text{
     margin-top: 1em;
     /* debug */
     background-color: aqua;
 }
+/* /section-features */
+/* section-planning */
+section#planning{
+    padding: 1.5em 0;
+}
+#planning .cards{
+    background-color: var(--white-col);
+    margin-top: 1.5em;
+}
+/* /section-planning */
 /* /MAIN */
 /* MEDIAQUERIES */
 @media screen  and (min-width:768px){
     .container{
         width: 90%;
-    } 
-    .features .row{
+    }
+    /* section-features */
+    #features .row{
         gap: 1.5em;
     }
-    .features .col{
+    #features .col{
         width: calc(100% / 3 - (1.5em * 2 / 3));
         margin-bottom: 0;
     }
-    .features .col:first-child{
+    #features .col:first-child{
         width: calc(100% / 3 * 2 - 1.5em / 3 );
     }
+    /* /section-features */
+    /* section-planning */
+    /* commons */
+    section{
+        margin-top: 1em;
+    }
+    /* /commons */
+   
 }
 @media screen  and (min-width:992px){
+    /* header */
     .container{
         width: 60%;
     }
@@ -107,16 +128,24 @@ section.features{
     .main-menu ul{
         display: flex;
     }
-    
-    .features .col>.cards:first-child{
+    /* /header */
+    /* main */
+    /* section-features */
+    #features .col>.cards:first-child{
         display: flex;
     }
-    .features .image,
-    .features .text{
+    #features .image,
+    #features .text{
         width: 50%;
         padding: .5em;
         margin-top: 0;
     }
+    /* /section-features */
+    /* section-planning */
+     #planning .container{
+        width: 50%;
+    }
+    /* /section-planning */
 }
 @media screen  and (min-width:1200px){
     .container{
