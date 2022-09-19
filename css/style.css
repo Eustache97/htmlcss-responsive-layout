@@ -23,3 +23,59 @@ img{
     --dark-gray: #333;
 }
 /* /RESET */
+/* COMMONS */
+.flex-container{
+    display:flex;
+    justify-content: space-between;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+ul{
+    list-style-type: none;
+}
+/* /COMMONS */
+/* HEADER */
+header{
+    width: 100%;
+    padding: 1em 0;
+    background-color: var(--primary-col);
+    color: var(--white-col);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+header .container{
+    align-items: center;
+}
+.main-menu ul{
+    display: none;
+}
+
+/* /HEADER */
+/* MEDIAQUERIES */
+@media screen  and (min-width:768px){
+    .container{
+        width: 90%;
+    }
+}
+@media screen  and (min-width:992px){
+    .container{
+        width: 60%;
+    }
+    .hamburger{
+        display: none;
+    }
+    .main-menu ul{
+        display: flex;
+    }
+}
+@media screen  and (min-width:1200px){
+    .container{
+        max-width: 1000px;
+    }
+}
+
+/* /MEDIAQUERIES */
