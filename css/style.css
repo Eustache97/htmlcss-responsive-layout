@@ -1,0 +1,25 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 100%;
+}
+img{
+    width: 100%;
+}
+:root{
+    /* palette */
+    --primary-col: #0084fd;
+    --primary-col-light: #b5ddff;
+    --secondary-col: #9792e4;
+    --secondary-col-light: #d5d4f4;
+    /* commons */
+    --text-col: #111;
+    --white-col:#fff;
+    --dark-gray: #333;
+}
+/* /RESET */
