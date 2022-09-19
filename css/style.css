@@ -26,7 +26,8 @@ img{
 /* COMMONS */
 .flex-container{
     display:flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
 }
 .container{
     width: 80%;
@@ -34,6 +35,10 @@ img{
 }
 ul{
     list-style-type: none;
+}
+.cards{
+    border-radius: 20px;
+    padding: 1em;
 }
 /* /COMMONS */
 /* HEADER */
@@ -48,6 +53,7 @@ header{
     z-index: 999;
 }
 header .container{
+    justify-content: space-between;
     align-items: center;
 }
 .main-menu ul{
@@ -55,10 +61,40 @@ header .container{
 }
 
 /* /HEADER */
+/* MAIN */
+section.features{
+    padding-top: 100px;
+}
+/* main :nth-child(even){
+    background-color:var(--secondary-col);
+} */
+.features .col{
+    background-color: var(--primary-col-light);
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.features .image,
+.features .text{
+    margin-top: 1em;
+    /* debug */
+    background-color: aqua;
+}
+/* /MAIN */
 /* MEDIAQUERIES */
 @media screen  and (min-width:768px){
     .container{
         width: 90%;
+    } 
+    .features .row{
+        gap: 1.5em;
+    }
+    .features .col{
+        width: calc(100% / 3 - (1.5em * 2 / 3));
+        margin-bottom: 0;
+    }
+    .features .col:first-child{
+        width: calc(100% / 3 * 2 - 1.5em / 3 );
     }
 }
 @media screen  and (min-width:992px){
@@ -70,6 +106,16 @@ header .container{
     }
     .main-menu ul{
         display: flex;
+    }
+    
+    .features .col>.cards:first-child{
+        display: flex;
+    }
+    .features .image,
+    .features .text{
+        width: 50%;
+        padding: .5em;
+        margin-top: 0;
     }
 }
 @media screen  and (min-width:1200px){
