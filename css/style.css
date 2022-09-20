@@ -55,6 +55,9 @@ a{
 p{
     line-height: 1.5rem;
 }
+a.grey.btn{
+    color: var(--white-col);
+}
 /* /COMMONS */
 /* UTILITY */
 .txtal{
@@ -87,6 +90,12 @@ p{
 }
 .white{
     background-color: var(--white-col);
+}
+.txtwhite{
+    color: var(--white-col);
+}
+.txtdark{
+    color: var(--secondary-col);
 }
 .grey{
     background-color: var(--secondary-col);
@@ -198,31 +207,43 @@ section#planning{
 }
 /* /section-planning */
 /* section-testimonials */
+#testimonials h1{
+    color: var(--secondary-col);
+}
 #testimonials .cards{
-    background-color: var(--secondary-col-light);
+    background-color: var(--secondary-col);
     padding: 1em;
+    color: var(--white-col);
     text-align: center;
     margin-top: 1em;
 }
-#testimonials .image{
+#testimonials .image img{
     border-radius: 50%;
     margin: 0 auto;
-    /* debug */
-    height: 100px;
-    width: 100px;
-    background-color: green;
+    height: 30vw;
+    width: 30vw;
+    object-fit: cover;
 
 }
 #testimonials .text{
     margin-top: 1em;
 }
+#testimonials .text span{
+    font-size: 2rem;
+}
 /* /section-testimonials */
 /* section-benefits */
+section#benefits{
+    color: var(--secondary-col);
+}
 #benefits .col{
     width: 100%;
     background-color: var(--white-col);
     border-radius: 20px;
     margin-top: 1em;
+}
+#benefits .col span{
+    font-size: 3rem;
 }
 /* /MAIN */
 /* MEDIAQUERIES */
@@ -256,6 +277,10 @@ section#planning{
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    #testimonials .image img{
+        height: 15vw;
+        width: 15vw;
     }
     #testimonials .text{
         width: 80%;
@@ -302,7 +327,7 @@ section#planning{
         width: 50%;
     }
     #planning h1{
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-top: 2em;
     }
     #planning .col{
@@ -318,6 +343,9 @@ section#planning{
         width: 30px;
     }
     /* /section-planning */
+    #testimonials h1{
+        font-size: 2rem;
+    }
     /* section-benefits */
     #benefits .col{
         width: calc(100% / 3 - 1.5em * 2 / 3);
