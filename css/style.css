@@ -42,6 +42,7 @@ ul{
 }
  section{
         margin-top: 1em;
+        padding: 1em 0;
     }
 /* /COMMONS */
 /* HEADER */
@@ -69,7 +70,7 @@ header .container{
 section#features{
     padding-top: 100px;
 }
-main :nth-child(even){
+main>section:nth-child(even){
     background-color:var(--secondary-col);
 }
 #features .col{
@@ -113,6 +114,14 @@ section#planning{
 #testimonials .text{
     margin-top: 1em;
 }
+/* /section-testimonials */
+/* section-benefits */
+#benefits .col{
+    width: 100%;
+    background-color: var(--white-col);
+    border-radius: 20px;
+    margin-top: 1em;
+}
 /* /MAIN */
 /* MEDIAQUERIES */
 @media screen  and (min-width:768px){
@@ -132,12 +141,26 @@ section#planning{
     }
     /* /section-features */
     /* section-planning */
+    /* /section-planning */
+    /* section-testimonials */
     #testimonials .cards{
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     #testimonials .text{
         width: 80%;
+        margin-top: 0;
+    }
+    /* /section-testimonials */
+    /* section-benefits */
+    #benefits .row{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5em;
+    }
+    #benefits .col{
+        width: calc(100% / 2 - 1.5em / 2);
         margin-top: 0;
     }
 }
@@ -170,6 +193,11 @@ section#planning{
         width: 50%;
     }
     /* /section-planning */
+    /* section-benefits */
+    #benefits .col{
+        width: calc(100% / 3 - 1.5em * 2 / 3);
+    }
+    /* /section-benefits */
 }
 @media screen  and (min-width:1200px){
     .container{
